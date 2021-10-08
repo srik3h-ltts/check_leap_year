@@ -2,12 +2,14 @@
 """
 import sys
 
-def is_leap_year(year_local: int) -> bool:
+def is_leap_year(year: int) -> bool:
     """A function that checks whether the passed argument is a leap year or not.
     """
-    return (year_local % 4 == 0) and (year_local % 100 != 0 or year_local % 400 == 0)
+    return (year % 4 == 0) and (year % 100 != 0 or year % 400 == 0)
 
-if __name__ == "__main__":
+def main():
+    """The main entry point function.
+    """
     try:
         year = int(input("Enter a year: "))
     except ValueError:
@@ -18,3 +20,6 @@ if __name__ == "__main__":
         print("It is a leap year.")
     else:
         print("It is not a leap year.")
+
+if __name__ == "__main__":
+    main()
